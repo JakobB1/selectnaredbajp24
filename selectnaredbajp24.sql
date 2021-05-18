@@ -37,3 +37,13 @@ select * from osoba where sifra<5;
 select * from osoba where sifra!=5;
 select * from osoba where sifra<>5;
 select * from osoba where sifra<=5;
+
+# logički operatori - boolovi operatori
+# and, or i not
+select * from osoba 
+where sifra>=3 and sifra<=5;
+
+select * from osoba where sifra=3 or sifra=5;
+
+select * from osoba where not (
+sifra=1 or ((sifra>=8 and sifra<=9) or sifra=12));
