@@ -47,3 +47,14 @@ select * from osoba where sifra=3 or sifra=5;
 
 select * from osoba where not (
 sifra=1 or ((sifra>=8 and sifra<=9) or sifra=12));
+
+# ostali operatori
+# in, between, like, is null i is not null
+
+select * from grupa where datumpocetka is not null;
+
+select * from osoba where sifra=5 or sifra=8 or sifra=12;
+select * from osoba where sifra in(5,8,12);
+
+select * from osoba where sifra>5 and sifra<=10;
+select * from osoba where sifra between 5 and 10;
