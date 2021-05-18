@@ -1,2 +1,2 @@
-select * from osoba;
-select * from osoba;
+select * from smjer
+where sifra<10;
