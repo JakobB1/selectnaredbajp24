@@ -58,3 +58,70 @@ select * from osoba where sifra in(5,8,12);
 
 select * from osoba where sifra>5 and sifra<=10;
 select * from osoba where sifra between 5 and 10;
+
+select * from osoba where ime='Josip';
+
+#sve osobe čije ime počinje slovom J
+select * from osoba where ime like '%';
+select * from osoba where ime like 'J%';
+select * from osoba where ime like '%om%';
+select * from osoba where ime like '%a';
+select * from osoba where ime not like '%a';
+
+
+
+# baza mjesta
+# odaberite sva mjesta koja se nalaze u Osječko baranjskoj
+# županiji
+select * from mjesto;
+select * from mjesto where postanskibroj like '31%';
+
+# odaberite sva mjesta koja u sebi imaju niz znakova guz
+select * from mjesto where naziv like '%guz%';
+
+# odaberite sva mjesta koja ne završavaju s nizom znakova ar 
+select * from mjesto where naziv not like '%ar';
+
+
+# baza knjiznica
+# odaberite sve autore za koje ne znamo datum rođenja
+select * from autor;
+select * from autor where datumrodenja is null;
+
+# odaberite autore koju su rođeni na vaš datum rođenja
+select * from autor where datumrodenja = '1997-26-06';
+
+# odaberite autore koji imaju isto ime kao vi
+select * from autor where ime like '%jakob%';
+
+# odaberite sve izdavače koji su iz
+# društva s ograničenom odgovornošću
+
+select * from izdavac;
+select * from izdavac where naziv like '%d.o.o.%'
+or naziv like '%d.o.o%'
+
+
+# baza world
+# odaberite sve zemlje iz Europe
+
+select * from country;
+select * from country where region like '%europe%';
+
+# unesite mjesto u kojem živite
+select * from country;
+select * from country where name like '%croatia%';
+select * from country where code like '%HRV%';
+
+# unesite mjesto Donji Miholjac
+select * from city;
+select * from city where name like '%Donji Miholjac%';
+
+# promjenite Donji Miholjac u Špičkovinu
+select * from city;
+select * from city where name like '%Donji Miholjac%';
+
+# update city set Name='Špičkovina'
+# where ID=4080;
+
+# obrišite mjesto Špičkovina
