@@ -24,3 +24,16 @@ select 1,2,'Pero' from osoba;
 # može se još nalaziti izraz(funkcija)
 select upper(ime), left(ime,1) from osoba;
 select now();
+
+
+#filtriranje redova
+# primarni ključ u where osigurava jedan red
+select * from osoba where sifra=1;
+
+# where radi s operatorima
+# operatori udpoređivanja
+# =, != (<>), <, >, <= i >=
+select * from osoba where sifra<5;
+select * from osoba where sifra!=5;
+select * from osoba where sifra<>5;
+select * from osoba where sifra<=5;
